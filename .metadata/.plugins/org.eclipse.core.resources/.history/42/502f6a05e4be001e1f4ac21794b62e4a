@@ -1,0 +1,7 @@
+package snake_game;
+
+import javax.swing.JFrame;
+
+public class gameF extends JFrame{
+
+}

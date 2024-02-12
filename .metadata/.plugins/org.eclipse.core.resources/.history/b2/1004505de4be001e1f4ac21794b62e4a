@@ -1,0 +1,7 @@
+package snake_game;
+
+import javax.swing.JPanel;
+
+public class gameP extends JPanel {
+
+}

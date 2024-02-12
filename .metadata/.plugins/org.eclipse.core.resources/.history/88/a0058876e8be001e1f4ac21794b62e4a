@@ -1,0 +1,12 @@
+package snake_game;
+
+import javax.swing.JFrame;
+
+public class GFrame extends JFrame{
+	
+	GFrame(){
+		this.add(new GPanel());
+		
+	}
+
+}

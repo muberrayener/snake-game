@@ -1,0 +1,86 @@
+package snake_game;
+
+import java.util.Random;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+@SuppressWarnings("serial")
+public class GPanel extends JPanel implements ActionListener {
+
+	static final int SCREEN_WIDTH = 300;
+	static final int SCREEN_HEIGHT = 300;
+	static final int UNIT_SIZE = 30;
+	static final int GAME_UNITS = (SCREEN_WIDTH*SCREEN_HEIGHT)/UNIT_SIZE;
+	static final int DELAY = 75;
+	int body;
+	int baitX;
+	int baitY;
+	int baitEaten;
+	final int x[]=new int[GAME_UNITS];
+	final int y[]=new int[GAME_UNITS];
+	char direction= 'R';
+	boolean running = false;
+	Random random;
+	Timer timer;
+	
+	GPanel(){
+		random = new Random();
+		this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
+		this.setBackground(Color.gray);
+		this.setFocusable(true);
+		this.addKeyListener(new MyKeyAdapter());
+		startGame();
+	}
+
+	public void startGame() {
+		newBait();
+		running = true;
+		timer = new Timer(DELAY,this);
+		timer.start();
+
+	}
+	@Override
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		 g.fillRect(100, 100, 100, 100);
+		draw(g);
+	}
+	
+	public void draw(Graphics g) {
+		g.setColor(Color.CYAN);
+	}
+	
+	public void newBait() {
+		
+	}
+	
+	public void checkCollision() {
+		
+	}
+	public void checkBait() {
+		 
+	}
+	
+	public void gameOver(Graphics g) {
+		
+	}
+	public void actionPerformed(ActionEvent a) {
+		
+	}
+	
+	public class MyKeyAdapter extends KeyAdapter{
+		@Override
+		public void keyPressed(KeyEvent e) {
+			
+		}
+	}
+	
+}

@@ -1,0 +1,22 @@
+package snake_game;
+
+import javax.swing.JFrame;
+
+@SuppressWarnings("serial")
+public class GFrame extends JFrame{
+	
+	JFrame GFrame = new JFrame();
+
+
+	 GFrame(){
+		this.add(new GPanel());
+		this.setTitle("Snake Game");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
+		this.pack();
+		this.setVisible(true);
+		this.setLocationRelativeTo(null);
+		
+	}
+
+}
