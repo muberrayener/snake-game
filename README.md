@@ -1,1 +1,1 @@
-a simple java project implememnting a version of snake game.
+a simple java project implementing a version of snake game.
